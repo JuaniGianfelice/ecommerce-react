@@ -1,32 +1,41 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { Router, Route, Routes } from "react-router-dom";
 import "./App.css";
+import HomeContainer from "./containers/HomeContainer";
 import ProductsContainer from "./containers/ProductsContainers";
 import { EcommerceProvider } from "./context/EcommerceContext";
+import { addElementToCart } from './redux/actions/cart';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import HomeContainer from "./containers/HomeContainer";
 
-function App() {
+const App = () => {
+  const STATE = useSelector(state => state.combineReducer);
+  const dispatch = useDispatch();
+
+  console.log(STATE);
+
   return (
     <div className="App">
-      <BrowserRouter>
+      <button onClick={() => { dispatch(addElementToCart({ id: 1, name: 'shirt', price: 3000 })) }}>
+        Agregar al carrito
+      </button>
+      <Router>
         <EcommerceProvider>
-          <Switch> 
+          
+          <Routes>
 
-            <Route exact path="/">
-              <HomeContainer />
-            </Route>
+            <Route exact path="/" element={<HomeContainer/>} />
 
-            <Route exact path="/productos">
-              <ProductsContainer />        
-            </Route>
 
-            <Route path="/productos/:busqueda">
-              <ProductsContainer />        
-            </Route>
+            <Route exact path="/productos" element={<ProductsContainer/>} />
+              
 
-          </Switch>
+            <Route path="/productos/:busqueda" element={<ProductsContainer/>} />
+
+          </Routes>
+
+                        
         </EcommerceProvider>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

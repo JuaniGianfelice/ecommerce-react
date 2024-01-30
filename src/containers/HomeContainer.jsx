@@ -7,7 +7,7 @@ const HomeContainer = () => {
     return (
         <>
             <button><Link to={'/productos'}>Ver los productos</Link></button>
-            <h1>Hola, Tenes {carrito.length} productos en tu carrito</h1>
+            <h2>Hola, Tenes {carrito.length} productos en tu carrito</h2>
         </>
     )
 }

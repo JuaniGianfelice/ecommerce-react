@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { useParams } from "react-router";
-import CardComponent from "../component/CardComponent";
-import InfoBarComponent from "../component/InfoBar";
+import CardComponent from "../components/CardComponent";
+import InfoBarComponent from "../components/InfoBar";
 import { EcommerceContext } from "../context/EcommerceContext";
 
 const ProductsContainer = () => {

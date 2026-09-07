@@ -1,47 +1,678 @@
+/* ==========================================================================
+   Estilos del ecommerce.
+   Las variables de arriba son "el tema": si cambias un color aca, cambia en
+   toda la app. Es lo mismo que hacen Bootstrap o Tailwind por debajo.
+   ========================================================================== */
+
+:root {
+  --amarillo: #ffe600;
+  --azul: #3483fa;
+  --azul-oscuro: #2968c8;
+  --verde: #00a650;
+
+  --texto: #333333;
+  --texto-suave: #666666;
+  --texto-tenue: #999999;
+
+  --fondo: #ebebeb;
+  --superficie: #ffffff;
+  --borde: #e6e6e6;
+
+  --sombra: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --sombra-alta: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --radio: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+}
+
 .App {
+  min-height: 100vh;
+}
+
+/* ===== Botones ============================================================ */
+
+.boton {
+  font: inherit;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radio);
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.boton:active {
+  transform: translateY(1px);
+}
+
+.boton--primario {
+  background: var(--azul);
+  color: #ffffff;
+}
+
+.boton--primario:hover {
+  background: var(--azul-oscuro);
+}
+
+.boton--primario:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.boton--secundario {
+  background: rgba(52, 131, 250, 0.12);
+  color: var(--azul);
+}
+
+.boton--texto {
+  background: none;
+  color: var(--texto-suave);
+  font-weight: 500;
+}
+
+.boton--texto:hover {
+  color: #c0392b;
+}
+
+.boton--ancho {
+  width: 100%;
+}
+
+.boton--grande {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ===== Barra superior ===================================================== */
+
+.barra {
+  background: var(--amarillo);
+  box-shadow: var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.barra__contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.barra__logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.barra__logo span {
+  color: var(--azul);
+}
+
+.barra__busqueda {
+  flex: 1;
+  display: flex;
+  background: var(--superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  max-width: 640px;
+}
+
+.barra__busqueda input {
+  flex: 1;
+  border: none;
+  padding: 11px 14px;
+  font: inherit;
+  outline: none;
+  min-width: 0;
+}
+
+.barra__busqueda button {
+  border: none;
+  border-left: 1px solid var(--borde);
+  background: var(--superficie);
+  color: var(--texto-suave);
+  padding: 0 18px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.barra__busqueda button:hover {
+  background: #f5f5f5;
+  color: var(--azul);
+}
+
+.barra__carrito {
+  position: relative;
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--radio);
+  white-space: nowrap;
+}
+
+.barra__carrito:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.barra__contador {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--azul);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+}
+
+.barra__filtro {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 8px 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.barra__filtro input {
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radio);
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+  max-width: 420px;
+}
+
+.barra__filtro input:focus {
+  border-color: var(--azul);
+  background: var(--superficie);
+}
+
+.barra__limpiar {
+  background: none;
+  border: none;
+  color: var(--texto-suave);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ===== Contenido ========================================================== */
+
+.contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+.contenido__resumen {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+}
+
+.aviso {
+  background: #fff4d6;
+  border: 1px solid #ffd88a;
+  border-left: 4px solid #f5a623;
+  border-radius: var(--radio);
+  color: #7a5200;
+  padding: 12px 16px;
+  margin: 0 0 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.vacio {
+  background: var(--superficie);
+  border-radius: var(--radio);
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: var(--sombra);
+}
+
+.vacio h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.vacio p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+/* ===== Grilla de productos ===============================================
+   auto-fill + minmax hace el trabajo que antes hacian las col-4 de Bootstrap,
+   pero se adapta solo: mete todas las columnas que entren de al menos 220px.
+   ========================================================================== */
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.producto-card {
+  background: var(--superficie);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.producto-card:hover {
+  box-shadow: var(--sombra-alta);
+  transform: translateY(-2px);
+}
+
+.producto-card__imagen {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: var(--superficie);
+  display: grid;
+  place-items: center;
+  padding: 12px;
+}
+
+/* object-fit: contain es el que evita que las fotos salgan estiradas:
+   la imagen entra completa en su caja y respeta su proporcion. */
+.producto-card__imagen img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.etiqueta {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+
+.etiqueta--envio {
+  background: var(--verde);
+  color: #ffffff;
+}
+
+.producto-card__cuerpo {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.producto-card__precio {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+/* line-clamp corta el titulo en 2 lineas con puntos suspensivos.
+   Sin esto, un titulo largo de ML empujaba la tarjeta y quedaban todas
+   de distinto alto (por eso antes habias puesto height: 600px a mano). */
+.producto-card__titulo {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--texto);
+  line-height: 1.35;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.producto-card__meta {
+  font-size: 0.78rem;
+  color: var(--texto-tenue);
+  margin: 0 0 4px;
+}
+
+.producto-card__cuerpo .boton {
+  margin-top: auto;
+  font-size: 0.9rem;
+}
+
+/* Esqueleto de carga */
+.producto-card--esqueleto {
+  height: 340px;
+  background: linear-gradient(100deg, #f0f0f0 30%, #f8f8f8 50%, #f0f0f0 70%);
+  background-size: 200% 100%;
+  animation: brillo 1.2s infinite linear;
+}
+
+@keyframes brillo {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+/* ===== Panel del carrito ================================================== */
+
+.panel-fondo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 20;
+  animation: aparecer 0.2s ease;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(400px, 100%);
+  background: var(--superficie);
+  z-index: 21;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+  animation: entrar 0.22s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes entrar {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+.panel__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--borde);
+}
+
+.panel__cabecera h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.panel__cerrar {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--texto-suave);
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.panel__vacio {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  gap: 14px;
+  text-align: center;
+  color: var(--texto-suave);
+  padding: 20px;
+}
+
+.panel__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.panel__item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--borde);
+}
+
+.panel__item img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+.panel__item-datos {
+  flex: 1;
+  min-width: 0;
+}
+
+.panel__item-titulo {
+  font-size: 0.85rem;
+  margin: 0 0 4px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.panel__item-precio {
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.panel__cantidad {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panel__cantidad button {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--borde);
+  background: var(--superficie);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--azul);
+}
+
+.panel__cantidad button:hover {
+  border-color: var(--azul);
+}
+
+.panel__cantidad span {
+  min-width: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.panel__quitar {
+  width: auto !important;
+  border: none !important;
+  background: none !important;
+  color: var(--texto-tenue) !important;
+  font-size: 0.8rem !important;
+  text-decoration: underline;
+  margin-left: auto;
+}
+
+.panel__pie {
+  border-top: 1px solid var(--borde);
+  padding: 16px 20px 20px;
+  display: grid;
+  gap: 10px;
+}
+
+.panel__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.05rem;
+}
+
+.panel__total strong {
+  font-size: 1.35rem;
+}
+
+/* ===== Home =============================================================== */
+
+.home {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 60px;
+}
+
+.home__hero {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.home__kicker {
+  color: var(--texto-tenue);
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.home__hero h1 {
+  font-size: clamp(1.9rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 16px;
+  font-weight: 700;
 }
 
-.img{
-  max-height: 400px;
-    margin: auto;
-}
-.card{
- height: 600px;
- margin: 10px;
+.home__hero h1 span {
+  background: var(--amarillo);
+  padding: 0 8px;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home__bajada {
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto 32px;
+}
+
+.home__acciones {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
+}
+
+.home__estado {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.home__categorias {
+  margin-top: 72px;
+  text-align: center;
+}
+
+.home__categorias h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+  margin: 0 0 16px;
+}
+
+.home__chips {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.chip {
+  background: var(--superficie);
+  color: var(--texto);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  box-shadow: var(--sombra);
+  transition: color 0.15s ease, box-shadow 0.15s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.chip:hover {
+  color: var(--azul);
+  box-shadow: var(--sombra-alta);
+}
+
+/* ===== Pantallas chicas =================================================== */
+
+@media (max-width: 640px) {
+  .barra__contenido {
+    flex-wrap: wrap;
+    gap: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .barra__busqueda {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .barra__carrito {
+    margin-left: auto;
+  }
+
+  .grilla {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .producto-card__precio {
+    font-size: 1.15rem;
+  }
+
+  .home {
+    padding-top: 48px;
   }
 }

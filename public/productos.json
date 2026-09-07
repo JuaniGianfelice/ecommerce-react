@@ -1,0 +1,219 @@
+{
+  "site_id": "MLA",
+  "query": "",
+  "paging": {
+    "total": 16,
+    "offset": 0,
+    "limit": 16
+  },
+  "results": [
+    {
+      "id": "MLA1001",
+      "title": "Notebook Lenovo IdeaPad 15.6\" Ryzen 5 16GB 512GB SSD",
+      "price": 899999,
+      "currency_id": "ARS",
+      "available_quantity": 8,
+      "condition": "new",
+      "thumbnail": "/img/mla1001.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1001",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1002",
+      "title": "Auriculares Inalambricos Bluetooth con Cancelacion de Ruido",
+      "price": 74999,
+      "currency_id": "ARS",
+      "available_quantity": 25,
+      "condition": "new",
+      "thumbnail": "/img/mla1002.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1002",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1003",
+      "title": "Teclado Mecanico Retroiluminado Switch Red Español",
+      "price": 58500,
+      "currency_id": "ARS",
+      "available_quantity": 14,
+      "condition": "new",
+      "thumbnail": "/img/mla1003.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1003",
+      "shipping": {
+        "free_shipping": false
+      }
+    },
+    {
+      "id": "MLA1004",
+      "title": "Mouse Gamer Inalambrico 16000 DPI RGB",
+      "price": 32900,
+      "currency_id": "ARS",
+      "available_quantity": 40,
+      "condition": "new",
+      "thumbnail": "/img/mla1004.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1004",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1005",
+      "title": "Monitor 27\" IPS 165Hz Full HD Bordes Ultrafinos",
+      "price": 429000,
+      "currency_id": "ARS",
+      "available_quantity": 5,
+      "condition": "new",
+      "thumbnail": "/img/mla1005.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1005",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1006",
+      "title": "Silla Gamer Ergonomica Reclinable con Apoyabrazos 3D",
+      "price": 315000,
+      "currency_id": "ARS",
+      "available_quantity": 3,
+      "condition": "new",
+      "thumbnail": "/img/mla1006.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1006",
+      "shipping": {
+        "free_shipping": false
+      }
+    },
+    {
+      "id": "MLA1007",
+      "title": "Mate Imperial de Calabaza con Virola de Alpaca",
+      "price": 18900,
+      "currency_id": "ARS",
+      "available_quantity": 60,
+      "condition": "new",
+      "thumbnail": "/img/mla1007.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1007",
+      "shipping": {
+        "free_shipping": false
+      }
+    },
+    {
+      "id": "MLA1008",
+      "title": "Zapatillas Urbanas Running Hombre Talle 42",
+      "price": 89900,
+      "currency_id": "ARS",
+      "available_quantity": 12,
+      "condition": "new",
+      "thumbnail": "/img/mla1008.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1008",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1009",
+      "title": "Cafetera Express Semiautomatica 20 Bares 1.5L",
+      "price": 259000,
+      "currency_id": "ARS",
+      "available_quantity": 7,
+      "condition": "new",
+      "thumbnail": "/img/mla1009.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1009",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1010",
+      "title": "Smartwatch Deportivo GPS Sumergible 1.8\" AMOLED",
+      "price": 112000,
+      "currency_id": "ARS",
+      "available_quantity": 22,
+      "condition": "new",
+      "thumbnail": "/img/mla1010.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1010",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1011",
+      "title": "Parlante Bluetooth Portatil 40W Resistente al Agua",
+      "price": 67500,
+      "currency_id": "ARS",
+      "available_quantity": 18,
+      "condition": "new",
+      "thumbnail": "/img/mla1011.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1011",
+      "shipping": {
+        "free_shipping": false
+      }
+    },
+    {
+      "id": "MLA1012",
+      "title": "Placa de Video RTX 4060 8GB GDDR6",
+      "price": 749000,
+      "currency_id": "ARS",
+      "available_quantity": 2,
+      "condition": "new",
+      "thumbnail": "/img/mla1012.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1012",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1013",
+      "title": "Escritorio de Melamina 120x60 Estilo Industrial",
+      "price": 145000,
+      "currency_id": "ARS",
+      "available_quantity": 9,
+      "condition": "new",
+      "thumbnail": "/img/mla1013.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1013",
+      "shipping": {
+        "free_shipping": false
+      }
+    },
+    {
+      "id": "MLA1014",
+      "title": "Camara Web Full HD 1080p con Microfono Integrado",
+      "price": 41200,
+      "currency_id": "ARS",
+      "available_quantity": 31,
+      "condition": "new",
+      "thumbnail": "/img/mla1014.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1014",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1015",
+      "title": "Disco Solido SSD 1TB NVMe M.2 Lectura 3500MB/s",
+      "price": 98700,
+      "currency_id": "ARS",
+      "available_quantity": 16,
+      "condition": "new",
+      "thumbnail": "/img/mla1015.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1015",
+      "shipping": {
+        "free_shipping": true
+      }
+    },
+    {
+      "id": "MLA1016",
+      "title": "Termo de Acero Inoxidable 1 Litro Boca Ancha",
+      "price": 34500,
+      "currency_id": "ARS",
+      "available_quantity": 45,
+      "condition": "new",
+      "thumbnail": "/img/mla1016.svg",
+      "permalink": "https://articulo.mercadolibre.com.ar/MLA1016",
+      "shipping": {
+        "free_shipping": false
+      }
+    }
+  ]
+}
